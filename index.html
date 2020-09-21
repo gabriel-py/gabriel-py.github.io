@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nltk</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="sortcut icon" href="imagens/icon.png">
+  </head>
+  <body>
+
+    <header id="cabecalho">
+
+      <section id="parte_imagem">
+        <img src="imagens/py.png" alt="some text" width=80 height=60>
+      </section>
+
+      <section id="texto">
+        <ul class="menu_horizontal">
+          <li class="opcoes_menu_horizontal"><a href="https://docs.python.org/pt-br/3/tutorial/">PYTHON</a></li>
+          <li class="opcoes_menu_horizontal"><a href="https://docs.oracle.com/en/database/">DATABASES</a></li>
+          <li class="opcoes_menu_horizontal"><a href="http://www.nltk.org/book/ch00-pt.html">NLTK</a></li>
+          <li class="opcoes_menu_horizontal"><a href="https://www.json.org/json-pt.html">JSON</a></li>
+          <li class="opcoes_menu_horizontal"><a href="https://docs.djangoproject.com/pt-br/3.1/">DJANGO</a></li>
+        </ul>
+      </section>
+
+    </header>
+
+    <aside id="lateral">
+	<h2 class="menu_lateral">Veja também...</h2>
+	<ul class="menu_lateral">
+	  <img src="imagens/java1.png" class="imagens_menu_lateral">
+          <li class="opcoes_menu_lateral"><a href="https://www.devmedia.com.br/guia/linguagem-java/38169">Como programar em Java</a></li>
+	  <img src="imagens/php1.png" class="imagens_menu_lateral">
+	  <li class="opcoes_menu_lateral"><a href="https://www.devmedia.com.br/guia/programador-php/38193">Fundamentos de PHP</a></li>
+	  <img src="imagens/py1.png" class="imagens_menu_lateral">
+	  <li class="opcoes_menu_lateral"><a href="https://medium.com/towards-artificial-intelligence/machine-learning-algorithms-for-beginners-with-python-code-examples-ml-19c6afd60daa">Python e Machine Learning</a></li>
+	</ul>
+    </aside>
+
+    <article id="content">
+      <h1 id="titulo">Processamento Eletrônico de Linguagens Naturais</h1>
+
+      <section class="galeria">
+		<img src="imagens/words.png" alt="some text" width=80 height=60 class="fotos_galeria">
+      		<img src="imagens/linguagemsocial.png" alt="some text" width=80 height=60 class="fotos_galeria">
+      		<img src="imagens/linguagens.png" alt="some text" width=80 height=60 class="fotos_galeria">
+      		<img src="imagens/nltk.png" alt="some text" width=80 height=60 class="fotos_galeria">
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </section>
+
+      <section id="textao">
+        <p class="paragrafo">O processamento de linguagem natural, ou PLN (ou, ainda, NLP, do inglês Natural Language Processing), é o campo da pesquisa computacional que estuda como poderíamos fazer com que uma máquina consiga entender a linguagem dos humanos, especificamente, a linguagem escrita. Ou seja, o objetivo da PLN é explorar a habilidade dos sistemas computacionais em entender textos. </p>
+        <h2 class="topico">Por que escolher Python?</h2>
+	<p class="paragrafo">Python tem um atributo único entre outras linguagens de programação: é fácil de usar quando se trata de computação quantitativa e analítica. É a linguagem líder do setor há algum tempo e está sendo amplamente utilizada em vários campos, como petróleo e gás, processamento de sinal, finanças e outros. Python é considerada uma linguagem para iniciantes e qualquer aluno ou pesquisador com conhecimento básico pode começar a trabalhar com ela. O tempo gasto em códigos de depuração e em várias restrições de engenharia de software também é minimizado. Python fornece um banco de dados massivo de bibliotecas para inteligência artificial e aprendizado de máquina. Algumas das bibliotecas mais populares incluem Scikit Learn, TensorFlow, Seaborn, Pytorch, Matplotlib, Pandas e muito mais. Mas será que poderíamos implementar uma aplicação de processamento de linguagem natural usando Python? Sim! No universo pytonico, o módulo (ou library) mais conhecido e amplamente utilizado é o NLTK (Natural Language Toolkit).</p>
+	<h2 class="topico">A biblioteca NLTK</h2>
+	<p class="paragrafo">O Natural Language Toolkit, ou mais comumente o NLTK, é um conjunto de bibliotecas e programas para processamento simbólico e estatístico da linguagem natural para inglês, escrito na linguagem de programação Python. Para começar, é necessário que você tenha uma versão recente do Python e o pip instalados no seu computador. Com esses requerimentos satisfeitos, podemos instalar o NLTK, digitando no terminal:</p>
+	<p class="comando">pip install nltk</p>
+	<p class="paragrafo">Completada a instalação, podemos importar o NLTK, dentro do Python:</p>
+	<p class="comando">import nltk</p>
+	<p class="paragrafo">Como este é um módulo que demanda muita informação de referência para poder funcionar, precisamos fazer dowload de alguns pacotes de informação para podermos conduzir as nossas análises. Imagine uma ferramenta que precisa ser capaz de processar textos em português, que possui um léxico de 381.000 palavras e, também, textos em inglês, com um léxico de 171.476! Por isso, usamos nltk.dowload para pegarmos as informações que precisamos. Para o exemplo que implementaremos aqui, utilizaremos as “stopwords”, que são palavras que usamos para construir frases, mas que não carregam a informação primária que está sendo transmitida. Por exemplo, considere a frase “Eu gosto de chocolate com amendoim”. Para uma empresa que vende chocolates, certamente o que importa é que na minha frase apareceram as palavras “chocolate” e “amendoim” (e sem nenhuma negação!). As palavras “Eu”, “de”, “com” poderiam ser retiradas sem prejudicar uma análise de PLN. Sendo assim, vamos fazer o dowload das nossas stopwords:</p>
+	<p class="comando">nltk.download('stopwords')</br>stopwords = nltk.corpus.stopwords.words('portuguese')</p>
+	<p class="paragrafo">Com esta poderosa ferramenta é possível realizar milhares de operações em cima de textos. Para mais detalhes, acesse a documentação disponível <a href="http://www.nltk.org/book/ch00-pt.html">aqui</a>.</p>
+      </section>
+    </article>
+
+    <footer id="rodape">
+	<p>© Todos os direitos reservados.</p>
+    </footer>
+	
+   
+  <script src="comportamento.js"></script>
+  </body>
+</html>
